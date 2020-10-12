@@ -1,0 +1,29 @@
+INSTALL SERVERLESS PACKAGE
+npm i -g serverless
+
+SETTING UP SERVERLESS PROFILE
+serverless config credentials --provider aws --key yourkey --secret yoursecret --profile yourname 
+serverless config credentials --provider aws --key AKIAWELD5WA3EDL65CUM --secret VldeKwQw637ZFeTU7xVCKRHJArwV//lbR6+UIOuX --profile iamjai
+
+
+CREATING SERVERLESS LAMBDA FUNCTION 
+sls create --template aws-nodejs --path hello-world-nodejs
+
+DEPLOYING FUNCTION
+sls deploy -v
+
+TO INVOKE AND EXECUTE AN FUNCTION
+sls invoke -f hello -l
+
+TO DEPLOY AN FUNCTION ALONE 
+sls deploy function -f functionname
+
+TO FETCH LOGS OF FUNCTION
+sls logs -f hello -t 
+
+TO DESTROY AN FUNCTION
+sls remove
+
+TO UPLOAD FILE TO S3 BUCKET USING CMDLINE
+aws s3 cp file or path of file s3://yourbucketname
+    ex -> aws s3 cp cmds.txt s3://lambda-test-bucket-11231123
