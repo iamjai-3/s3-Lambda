@@ -15,8 +15,19 @@ service: s3-lambda
 
 custom:
   bucket: lambda-test-bucket-1123
-  
+  dotenv:
+    path: ../.env
+    basePath: ../
+    logging: false
+    # include:
+    #   - CLIENT
+    #   - DATE
+
 frameworkVersion: '2'
+
+plugins:
+  - serverless-dotenv-plugin
+
 
 provider:
   name: aws
@@ -36,6 +47,8 @@ functions:
       - s3:
           bucket: ${self:custom.bucket}
           event: s3:ObjectCreated:*
-  readFile:
-    handler: handler.readFile
+    # environment:
+    #   TEST_NAME: "iamjai"
+    #   TEST_MAIL: "jai@jai.com"
+
 

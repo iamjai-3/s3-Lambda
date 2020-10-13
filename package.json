@@ -1,0 +1,24 @@
+{
+  "name": "s3-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamjai-3/s3-Lambda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamjai-3/s3-Lambda/issues"
+  },
+  "homepage": "https://github.com/iamjai-3/s3-Lambda#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "serverless-dotenv-plugin": "^3.0.0"
+  }
+}
